@@ -6,14 +6,9 @@ script:
   - docker build -t udagram-api-feed ./udagram-api-feed
   - docker tag udagram-api-feed johnnkanu/udagram-api-feed:latest
   
-  - docker build -t udagram-frontend ./udagram-frontend
-  - docker tag udagram-frontend johnnkanu/udagram-frontend:latest
-
 
 
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push johnnkanu/udagram-api-feed
-
-  - docker push johnnkanu/udagram-frontend
+  - docker push johnnkanu/udagram-api-feed:latest
