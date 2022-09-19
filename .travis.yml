@@ -2,6 +2,7 @@ language: generic
 
 services:
   - docker
+  
 script:
   - docker build -t udagram-api-feed ./udagram-api-feed
   - docker tag udagram-api-feed johnnkanu/udagram-api-feed:latest
