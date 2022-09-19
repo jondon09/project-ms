@@ -12,7 +12,7 @@ script:
   - docker build -t udagram-api-user ./udagram-api-user
   - docker tag udagram-api-user johnnkanu/udagram-api-user:latest
 
-  - docker build -t reverseproxy ./reverseproxy
+  - docker build -t reverseproxy ./reverse-proxy
   - docker tag reverseproxy johnnkanu/reverseproxy:latest
 
 
